@@ -1,0 +1,33 @@
+global !p
+from php_snippets_helper import *
+endglobal
+
+snippet testclass "Test class" b
+namespace `!p snip.rv = namespace(path)`;
+
+use PHPUnit\Framework\TestCase;
+
+class `!p snip.rv = snip.basename` extends TestCase
+{
+	$0
+}
+endsnippet
+
+snippet it "Add itWhateverWeTest" b
+/**
+ * @test
+ */
+public function it$1()
+{
+	$0
+}
+endsnippet
+
+snippet dataprovider "dataprovider function" b
+public function provide$1(): array
+{
+	return [
+		[$0],
+	];
+}
+endsnippet

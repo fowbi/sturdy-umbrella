@@ -1,0 +1,19 @@
+global !p
+from php_snippets_helper import *
+endglobal
+
+snippet rqh "Slim RequestHandler" b
+namespace `!p snip.rv = namespace(path)`;
+
+use Slim\Http\Request;
+use Slim\Http\Response;
+
+final class `!p snip.basename`
+{
+	public function __invoke(Request $request, Response $response): Response
+	{
+		$0
+		return $response;
+	}
+}
+endsnippet
